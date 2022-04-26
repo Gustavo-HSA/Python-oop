@@ -1,14 +1,17 @@
 class Item:
-    def __init__(self, name, price, quantity):
+    def __init__(self, name: str, price: int, quantity=0):
         self.name = name
         self.price = price
         self.quantity = quantity
 
-    @staticmethod
-    def calculate_total_price(x, y):
-        return x * y
+    
+    def calculate_total_price(self):
+        return self.price * self.quantity
 
 
-item1 = Item("Phone", 100, 5)
+item1 = Item(1, 100, 1)
 
 item2 = Item("Notebook", 1000, 3)
+
+print(item1.calculate_total_price())
+print(item2.calculate_total_price())
