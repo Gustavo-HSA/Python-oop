@@ -4,7 +4,8 @@ class Item:
         self.price = price
         self.quantity = quantity
 
-    def calculate_total_price(self, x, y):
+    @staticmethod
+    def calculate_total_price(x, y):
         return x * y
 
 
